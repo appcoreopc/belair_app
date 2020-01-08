@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
+  templateUrl: './mould.detail.component.html',
 })
-export class HomeComponent {
+export class MouldDetailComponent {
 }
 
 
