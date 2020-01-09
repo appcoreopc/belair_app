@@ -13,6 +13,8 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MouldComponent } from './componentmould/mould.component';
 import { MouldDetailComponent } from './componentmoulddetail/mould.detail.component';
 import { LoginComponent } from './login/login.component';
+import { TechnicianLoginComponent } from './technicianlogin/technicianlogin.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { LoginComponent } from './login/login.component';
     CounterComponent,
     FetchDataComponent, 
     LoginComponent,
-    MouldComponent, MouldDetailComponent
+    MouldComponent, MouldDetailComponent, TechnicianLoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -35,6 +37,8 @@ import { LoginComponent } from './login/login.component';
       { path: 'login', component: LoginComponent },
       { path: 'mouldcomponent', component: MouldComponent },
       { path: 'moulddetailcomponent', component: MouldDetailComponent },
+      { path: 'logintechnician', component: TechnicianLoginComponent },
+      
     ])
   ],
   providers: [],
