@@ -14,7 +14,7 @@ import { MouldComponent } from './componentmould/mould.component';
 import { MouldDetailComponent } from './componentmoulddetail/mould.detail.component';
 import { LoginComponent } from './login/login.component';
 import { TechnicianLoginComponent } from './technicianlogin/technicianlogin.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { TechnicianLoginComponent } from './technicianlogin/technicianlogin.comp
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
-    FormsModule,
+    FormsModule, 
+    //NgbModule, // bootstap module
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },

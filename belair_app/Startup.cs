@@ -59,6 +59,7 @@ namespace belair_app
 
                 if (env.IsDevelopment())
                 {
+
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
