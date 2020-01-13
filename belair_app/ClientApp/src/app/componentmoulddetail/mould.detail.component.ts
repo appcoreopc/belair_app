@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './mould.detail.component.html',
 })
 export class MouldDetailComponent {
+
+
+  cycletime : number;
 }
 
 

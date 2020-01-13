@@ -10,11 +10,13 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { MouldComponent } from './componentmould/mould.component';
+import { MouldTopComponent } from './componentmould/mouldtop.component';
 import { MouldDetailComponent } from './componentmoulddetail/mould.detail.component';
 import { LoginComponent } from './login/login.component';
 import { TechnicianLoginComponent } from './technicianlogin/technicianlogin.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     CounterComponent,
     FetchDataComponent, 
     LoginComponent,
-    MouldComponent, MouldDetailComponent, TechnicianLoginComponent
+    MouldTopComponent, MouldDetailComponent, TechnicianLoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -36,7 +38,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'mouldcomponent', component: MouldComponent },
+      { path: 'mouldcomponent', component: MouldTopComponent },
       { path: 'moulddetailcomponent', component: MouldDetailComponent },
       { path: 'logintechnician', component: TechnicianLoginComponent },
       
