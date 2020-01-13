@@ -17,12 +17,8 @@ export class MouldTopComponent {
       console.log(result)
       this.forecasts = result;
     }, error => console.error(error));
-  }  
-   
-
+  }     
 }
-
-
 
 interface WeatherForecast {
   dateFormatted: string;
