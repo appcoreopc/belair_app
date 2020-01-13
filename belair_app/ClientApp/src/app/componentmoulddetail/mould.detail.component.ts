@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
 })
 export class MouldDetailComponent {
 
-
-  cycletime : number;
+  cycletime : number = 2;
 }
 
 
