@@ -16,8 +16,6 @@ import { LoginComponent } from './login/login.component';
 import { TechnicianLoginComponent } from './technicianlogin/technicianlogin.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,8 +29,7 @@ import { TechnicianLoginComponent } from './technicianlogin/technicianlogin.comp
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
-    FormsModule, 
-    //NgbModule, // bootstap module
+    FormsModule,   
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
