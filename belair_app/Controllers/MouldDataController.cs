@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using belair_app.Model;
-
 
 namespace belair_app.Controllers
 {
@@ -37,5 +35,23 @@ namespace belair_app.Controllers
                 Description  = rng.Next(-20, 55).ToString()                
             });
         }
+        
+        [HttpGet("[action]")]
+        public IEnumerable<MouldParameterSetting> GetParameterSettins(string Id)
+        {
+            var rng = new Random();
+            return Enumerable.Range(1, 5).Select(index => new MouldParameterSetting
+            {
+                MouldId = DateTime.Now.AddDays(index).ToString("d"),
+                Description  = rng.Next(-20, 55).ToString()                
+            });
+        }
+
+        [HttpPost("[action]")]
+        public bool UpdateParameterSettins(string Id)
+        {
+            return true;
+        }
+
     }
 }
