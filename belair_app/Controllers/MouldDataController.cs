@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using belair_app.Model;
+
 
 namespace belair_app.Controllers
 {
@@ -15,30 +17,25 @@ namespace belair_app.Controllers
         };
 
         [HttpGet("[action]")]
-        public IEnumerable<WeatherForecast> WeatherForecasts()
+        public IEnumerable<MouldInfo> GetMouldInfo()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new MouldInfo
             {
-                DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
+                MouldId = DateTime.Now.AddDays(index).ToString("d"),
+                Description  = rng.Next(-20, 55).ToString()                
             });
         }
 
-        public class WeatherForecast
+        [HttpGet("[action]")]
+        public IEnumerable<MouldDetailInfo> GetMouldDetail()
         {
-            public string DateFormatted { get; set; }
-            public int TemperatureC { get; set; }
-            public string Summary { get; set; }
-
-            public int TemperatureF
+            var rng = new Random();
+            return Enumerable.Range(1, 5).Select(index => new MouldDetailInfo
             {
-                get
-                {
-                    return 32 + (int)(TemperatureC / 0.5556);
-                }
-            }
+                MouldId = DateTime.Now.AddDays(index).ToString("d"),
+                Description  = rng.Next(-20, 55).ToString()                
+            });
         }
     }
 }
