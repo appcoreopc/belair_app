@@ -14,7 +14,7 @@ import { MouldTopComponent } from './componentmould/mouldtop.component';
 import { MouldDetailComponent } from './componentmoulddetail/mould.detail.component';
 import { LoginComponent } from './login/login.component';
 import { TechnicianLoginComponent } from './technicianlogin/technicianlogin.component';
-
+import { UnauthorizedComponent } from './componentErrorPage/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { TechnicianLoginComponent } from './technicianlogin/technicianlogin.comp
     HomeComponent,
     CounterComponent,
     FetchDataComponent, 
-    LoginComponent,
+    LoginComponent, UnauthorizedComponent,
     MouldTopComponent, MouldDetailComponent, TechnicianLoginComponent
   ],
   imports: [
@@ -38,6 +38,7 @@ import { TechnicianLoginComponent } from './technicianlogin/technicianlogin.comp
       { path: 'mouldcomponent', component: MouldTopComponent },
       { path: 'moulddetailcomponent', component: MouldDetailComponent },
       { path: 'logintechnician', component: TechnicianLoginComponent },
+      { path: 'unauthorized', component: UnauthorizedComponent }
       
     ])
   ],

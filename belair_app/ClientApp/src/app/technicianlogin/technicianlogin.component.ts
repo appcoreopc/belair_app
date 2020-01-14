@@ -2,8 +2,6 @@ import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { RouterModule, Routes, Router} from '@angular/router';
 
-
-
 @Component({
   selector: 'app-home',
   templateUrl: './technicianlogin.component.html',
@@ -14,7 +12,7 @@ export class TechnicianLoginComponent {
     @Inject('BASE_URL') private baseUrl: string) 
     {
       
-    }
+    };
 
   public void LoginTechnician() {
 
