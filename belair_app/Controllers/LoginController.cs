@@ -15,30 +15,17 @@ namespace belair_app.Controllers
         };
 
         [HttpGet("[action]")]
-        public IEnumerable<WeatherForecast> WeatherForecasts()
+        public async Task<bool> LoginUser()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            });
+            await Task.Delay(2000);
+            return await Task.FromResult<bool>(true);            
         }
 
-        public class WeatherForecast
+        [HttpGet("[action]")]
+        public async Task<bool> LoginTechnician()
         {
-            public string DateFormatted { get; set; }
-            public int TemperatureC { get; set; }
-            public string Summary { get; set; }
-
-            public int TemperatureF
-            {
-                get
-                {
-                    return 32 + (int)(TemperatureC / 0.5556);
-                }
-            }
-        }
+            await Task.Delay(2000);
+            return await Task.FromResult<bool>(true);
+        }     
     }
 }
