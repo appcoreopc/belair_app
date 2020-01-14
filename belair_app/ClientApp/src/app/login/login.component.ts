@@ -11,7 +11,7 @@ export class LoginComponent {
   constructor(private http: HttpClient, private router : Router, 
     @Inject('BASE_URL') private baseUrl: string) 
     {
-      
+
     }
 
   public void LoginUser() {
@@ -24,7 +24,10 @@ export class LoginComponent {
 
        if (result == true) {
           this.router.navigate(['/']);
-       }      
+       }     
+       else {
+        this.router.navigate(['/unauthorized']);
+       }
        
     }, error => console.error(error));    
   };

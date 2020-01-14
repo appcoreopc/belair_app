@@ -13,7 +13,7 @@ export class TechnicianLoginComponent {
     {
       
     };
-
+    
   public void LoginTechnician() {
 
      console.log('logging in user');
@@ -24,11 +24,11 @@ export class TechnicianLoginComponent {
 
        if (result == true) {
           this.router.navigate(['/']);
-       }      
+       } 
+       else  {
+        this.router.navigate(['/unauthorized']); 
+       }     
        
     }, error => console.error(error));    
   };
-
 }
-
-
