@@ -8,10 +8,10 @@ import { RouterModule, Routes, Router} from '@angular/router';
 })
 export class LoginComponent {
 
-  private forecasts: boolean; 
-
   constructor(private http: HttpClient, private router : Router, 
-    @Inject('BASE_URL') private baseUrl: string) {
+    @Inject('BASE_URL') private baseUrl: string) 
+    {
+      
     }
 
   public void LoginUser() {
@@ -24,9 +24,8 @@ export class LoginComponent {
 
        if (result == true) {
           this.router.navigate(['/']);
-       }
-      
-       this.forecasts = result;
+       }      
+       
     }, error => console.error(error));    
   };
 }
